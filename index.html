@@ -1,1 +1,543 @@
-Hello Wrold
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綠氨行業發展前景研究報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #e6fffa 0%, #ebf4ff 100%);
+        }
+        .card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #38b2ac;
+        }
+        .comparison-table th {
+            background-color: #38b2ac;
+            color: white;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f0fdf4;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="gradient-bg py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">綠氨行業發展前景研究報告</h1>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>提交日期：2025年7月11日</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-university mr-2"></i>
+                        <span>製備機構：能源與碳中和研究中心</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 摘要 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-file-alt mr-3 text-teal-500"></i>摘要
+                </h2>
+                <p class="mb-6 text-gray-700 leading-relaxed">本報告系統分析綠氨（以可再生能源製備的零碳氨）的產業鏈、技術路線、市場規模及應用前景。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-teal-700 mb-2">技術成熟度提升</h3>
+                        <p class="text-gray-700">電解水製氫耦合低壓合成氨工藝逐步商業化，成本有望於2030年下降33%。</p>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-teal-700 mb-2">市場爆發式增長</h3>
+                        <p class="text-gray-700">全球綠氨市場規模預計從2024年1.37億美元增至2031年195.5億美元，年均複合增長率90.8%。</p>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-teal-700 mb-2">中國產能快速擴張</h3>
+                        <p class="text-gray-700">截至2025年，中國規劃綠氨產能近1500萬噸/年，內蒙古佔比71%。</p>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-teal-700 mb-2">應用場景多元化</h3>
+                        <p class="text-gray-700">從農業肥料拓展至船運燃料、煤電摻燒、工業脫碳等領域。</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <h3 class="font-bold text-yellow-700 mb-2">關鍵挑戰</h3>
+                    <p class="text-gray-700">成本競爭力不足（當前價格為煤製氨1.2–2.1倍）、波動性可再生能源與連續生產的匹配難題。</p>
+                </div>
+            </div>
+
+            <!-- 行業概述 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-industry mr-3 text-teal-500"></i>行業概述
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700 flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-teal-400"></i>定義與特性
+                    </h3>
+                    <div class="pl-6">
+                        <p class="mb-4 text-gray-700 leading-relaxed"><span class="font-bold text-teal-600">綠氨</span>：以風電/光伏驅動電解水製氫，結合空氣分離製氮，通過哈伯法合成的零碳氨，碳排放強度近乎零。</p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                            <h4 class="font-bold text-gray-700 mb-2">相較傳統氨的優勢</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li><span class="font-semibold">減碳效果</span>：生產碳強度較煤製氨降低85%以上。</li>
+                                <li><span class="font-semibold">能源載體屬性</span>：能量密度高（3.5kWh/L），儲運成本僅為氫氣的1%。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700 flex items-center">
+                        <i class="fas fa-history mr-2 text-teal-400"></i>發展歷程
+                    </h3>
+                    <div class="space-y-6 pl-6 timeline-item relative">
+                        <div class="pl-6 relative">
+                            <div class="absolute -left-2 top-3 h-4 w-4 rounded-full bg-teal-500 border-4 border-white"></div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800">技術探索（2020年前）</h4>
+                                <p class="text-gray-700">哈伯法主導灰氨生產，碳排放高。</p>
+                            </div>
+                        </div>
+                        <div class="pl-6 relative">
+                            <div class="absolute -left-2 top-3 h-4 w-4 rounded-full bg-teal-500 border-4 border-white"></div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800">示範啟動（2021–2024）</h4>
+                                <p class="text-gray-700">全球首個氨燃料陶瓷燒製成功（2023）；中國遠景2萬噸綠氨項目投產。</p>
+                            </div>
+                        </div>
+                        <div class="pl-6 relative">
+                            <div class="absolute -left-2 top-3 h-4 w-4 rounded-full bg-teal-500 border-4 border-white"></div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800">商業化初期（2025–）</h4>
+                                <p class="text-gray-700">遠景赤峰30萬噸項目獲必維認證（2025），標誌國際標準化突破。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技術基礎 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-microscope mr-3 text-teal-500"></i>綠氨的技術基礎
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">生產工藝</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">主流路線</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li><span class="font-semibold">電解水製氫+哈伯法合成</span>：佔現有項目90%以上，但能耗高（35–50萬千瓦/500噸氨）。</li>
+                                <li><span class="font-semibold">柔性工藝（低溫低壓法）</span>：降低能耗30%，適配可再生能源波動性。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">前沿技術</h4>
+                            <p class="text-gray-700">光催化/電化學合成：實驗室階段，目標取消高壓反應條件。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">技術發展趨勢</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">動態耦合系統</h4>
+                            <p class="text-gray-700">如遠景赤峰項目通過AI調度風光儲與製氨，實現100%綠電直連。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">離網多穩態方案</h4>
+                            <p class="text-gray-700">儲能與儲氫成本佔總成本15–20%，解決波動性問題。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 應用領域 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-lightbulb mr-3 text-teal-500"></i>綠氨的應用領域
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">工業用途</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">化肥生產</h4>
+                            <p class="text-gray-700">替代灰氨用於氮肥，減碳4.4–4.8噸CO₂/噸氨。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">化工原料</h4>
+                            <p class="text-gray-700">用於合成橡膠、塑料，降低產業鏈碳足跡。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">能源領域</h3>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-700 mb-3">船運燃料</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full comparison-table rounded-lg overflow-hidden">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left py-3 px-4">燃料屬性</th>
+                                        <th class="text-left py-3 px-4">甲醇</th>
+                                        <th class="text-left py-3 px-4">綠氨</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4 font-semibold">減碳潛力</td>
+                                        <td class="py-3 px-4">最高25%</td>
+                                        <td class="py-3 px-4">近100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-semibold">能量密度</td>
+                                        <td class="py-3 px-4">低</td>
+                                        <td class="py-3 px-4">高（3.5kWh/L）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-semibold">基礎設施成熟度</td>
+                                        <td class="py-3 px-4">122個港口可加注</td>
+                                        <td class="py-3 px-4">全球氨管道網絡建設中</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-teal-600 mb-2">煤電摻燒</h4>
+                        <p class="text-gray-700">日本實證20%摻燒技術，中國推進示範項目。</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">環保與其他應用</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">廢水處理</h4>
+                            <p class="text-gray-700">作為脫硝劑替代尿素。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">氫能載體</h4>
+                            <p class="text-gray-700">通過裂解供應高純氫，解決儲運難題。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 市場現狀 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-chart-line mr-3 text-teal-500"></i>全球與中國綠氨市場現狀分析
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">市場規模與供需</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">全球市場</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>2031年市場規模預測195.5億美元，CAGR 90.8%（2025–2031）。</li>
+                                <li>產能分佈：歐盟、澳大利亞、智利為主，60+項目集中投產於2026年。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">中國市場</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>產能規劃：1500萬噸/年，內蒙古（71%）、東北（18%）為核心。</li>
+                                <li>供需缺口：2025年農業與工業需求佔比70%，能源需求2030年躍升至50%。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold text-gray-700 mb-3">中國綠氨在建項目（2025年）</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full comparison-table rounded-lg overflow-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="text-left py-3 px-4">企業</th>
+                                    <th class="text-left py-3 px-4">項目地點</th>
+                                    <th class="text-left py-3 px-4">產能（萬噸/年）</th>
+                                    <th class="text-left py-3 px-4">進度</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">遠景能源</td>
+                                    <td class="py-3 px-4">赤峰</td>
+                                    <td class="py-3 px-4">152</td>
+                                    <td class="py-3 px-4">32萬噸投產</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">國能集團</td>
+                                    <td class="py-3 px-4">滄州</td>
+                                    <td class="py-3 px-4">5</td>
+                                    <td class="py-3 px-4">在建</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">中能建</td>
+                                    <td class="py-3 px-4">松原</td>
+                                    <td class="py-3 px-4">20</td>
+                                    <td class="py-3 px-4">在建</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">價格走勢</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>當前成本：1.2–2.1倍煤製氨，主因綠電成本高（需＜0.15元/千瓦時才具競爭力）。</li>
+                            <li>下降路徑：2030年成本預計降33%，2040–2045年實現平價。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 競爭格局 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-chess-board mr-3 text-teal-500"></i>競爭格局分析
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">主要參與者</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full comparison-table rounded-lg overflow-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="text-left py-3 px-4">企業類型</th>
+                                    <th class="text-left py-3 px-4">代表企業</th>
+                                    <th class="text-left py-3 px-4">市場策略</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">國央企</td>
+                                    <td class="py-3 px-4">中能建、國電投、中石油</td>
+                                    <td class="py-3 px-4">主導大規模基地項目</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">新能源企業</td>
+                                    <td class="py-3 px-4">遠景能源、金風科技</td>
+                                    <td class="py-3 px-4">技術整合+國際認證</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">國際巨頭</td>
+                                    <td class="py-3 px-4">托普索（丹麥）、西門子（德國）</td>
+                                    <td class="py-3 px-4">設備供應+工藝授權</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">競爭策略</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">縱向整合</h4>
+                            <p class="text-gray-700">遠景構建"風光儲-氫-氨"全鏈條，降低邊際成本。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">國際認證先行</h4>
+                            <p class="text-gray-700">必維認證提升綠氨融資性與出口競爭力（如遠景赤峰項目）。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 政策法規 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-gavel mr-3 text-teal-500"></i>政策法規與標準體系
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">國家政策</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">中國</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>《綠色低碳先進技術示範項目清單》納入19個氫氨項目。</li>
+                                <li>合成氨行業強制碳排限值：2025年單位能耗降5%。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">國際</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>日本《氫能社會促進法案》：15年補貼低碳氫氨。</li>
+                                <li>歐盟RFNBO標準：要求綠氨全生命週期碳排放＜0.36噸CO₂/噸氨。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">行業標準</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">認證體系</h4>
+                            <p class="text-gray-700">必維可再生氨認證、ISCC PLUS（遠景推進中）。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">安全規範</h4>
+                            <p class="text-gray-700">液氨管道運輸標準（美國已建3000公里管網）。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 市場前景 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-chart-pie mr-3 text-teal-500"></i>市場前景與預測
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">預測模型</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <p class="text-gray-700 font-semibold mb-2">基於可再生能源成本下降與技術迭代，2030年綠氨經濟性路徑：</p>
+                        <div class="bg-white p-4 rounded border-l-4 border-teal-400">
+                            <p class="text-gray-700 mb-2"><span class="font-semibold">農業場景</span>：碳市場驅動 → 2040年平價</p>
+                            <p class="text-gray-700 mb-2"><span class="font-semibold">船運燃料</span>：政策補貼啟動 → 2035年成本競爭力顯現</p>
+                            <p class="text-gray-700"><span class="font-semibold">煤電摻燒</span>：示範項目擴容 → 2030年規模化應用</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">增長潛力</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">短期（2025–2030）</h4>
+                            <p class="text-gray-700">產能突破4000萬噸/年，中國佔全球30%。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">長期（2040–2050）</h4>
+                            <p class="text-gray-700">能源應用佔需求50%，替代航運業30%化石燃料。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 風險與挑戰 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-exclamation-triangle mr-3 text-teal-500"></i>風險與挑戰
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">技術風險</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">波動性管理</h4>
+                            <p class="text-gray-700">可再生能源間歇性需配套儲能（成本佔比15–20%）。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">新型工藝瓶頸</h4>
+                            <p class="text-gray-700">電化學合成氨轉化率＜60%，低於工業級要求（＞90%）。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">市場與政策風險</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">綠色溢價接受度</h4>
+                            <p class="text-gray-700">當前綠氨價格溢價100%，依賴強制性碳關稅（如歐盟CBAM）。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">國際標準衝突</h4>
+                            <p class="text-gray-700">各國碳排放核算差異可能形成貿易壁壘。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 結論與建議 -->
+            <div class="card bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2 flex items-center">
+                    <i class="fas fa-check-circle mr-3 text-teal-500"></i>結論與建議
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">核心結論</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                            <li>綠氨是化工、航運、電力深度脫碳的戰略載體，2040年能源應用將主導需求。</li>
+                            <li>中國憑藉風光資源與項目集群優勢，有望成為全球最大綠氨生產國。</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">發展建議</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">企業層面</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>佈局柔性合成氨技術，降低可再生能源波動影響。</li>
+                                <li>爭取ISCC、必維等認證，切入國際船運燃料供應鏈。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-teal-600 mb-2">政策層面</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>設立綠氨摻燒發電碳減排核算標準，加速煤電低碳改造。</li>
+                                <li>建設液氨輸送管網，銜接西北生產基地與東南港口。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 數據來源 -->
+            <div class="bg-gray-100 p-6 rounded-xl mb-12">
+                <h3 class="text-lg font-semibold mb-4 text-gray-700">數據來源</h3>
+                <p class="text-gray-600">華經產業研究院、落基山研究所、QYResearch、石油和化學工業規劃院、行業政策文件、企業公開資料。</p>
+            </div>
+
+            <!-- 頁腳 -->
+            <div class="text-center text-gray-500 text-sm py-6 border-t">
+                <p>網頁由問小白生成，僅供參考</p>
+                <p>最後更新時間為2025年7月11日，星期五</p>
+                <p class="mt-2"><a href="https://wenxiaobai.com" class="text-teal-500 hover:text-teal-700">問小白官網：wenxiaobai.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
