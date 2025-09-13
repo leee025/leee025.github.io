@@ -1,0 +1,620 @@
+/* 隆機綠能財務分析報告 - 主要樣式表 */
+
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #1b5e20;
+  --accent-color: #4caf50;
+  --light-accent: #81c784;
+  --text-color: #212121;
+  --text-light: #757575;
+  --background-light: #f5f5f5;
+  --background-white: #ffffff;
+  --chart-color-1: #2e7d32;
+  --chart-color-2: #1976d2;
+  --chart-color-3: #ffa000;
+  --chart-color-4: #e53935;
+  --chart-color-5: #6d4c41;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans SC', Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, sans-self;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-light);
+}
+
+/* 標題和文字樣式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif TC', 'Noto Serif SC', Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, sans-self;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-accent);
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* 導航欄樣式 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo i {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* 主要容器 */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 英雄區域樣式 */
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.report-date {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* 節點樣式 */
+.section {
+  padding: 4rem 0;
+  background-color: var(--background-white);
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section:last-child {
+  margin-bottom: 4rem;
+}
+
+/* 卡片樣式 */
+.card {
+  background-color: var(--background-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* 圖表容器 */
+.chart-container {
+  background-color: var(--background-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.chart-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.chart-description {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.chart {
+  height: 400px;
+  width: 100%;
+}
+
+/* 表格樣式 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: var(--light-accent);
+  color: var(--background-white);
+  font-weight: 600;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.data-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 網格布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+/* 投資建議樣式 */
+.recommendation {
+  background-color: #e8f5e9;
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.recommendation-header i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.recommendation-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.recommendation-rating {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.recommendation-rating-label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.recommendation-rating-stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+/* 頁腳樣式 */
+.footer {
+  background-color: var(--secondary-color);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .grid {
+    gap: 1rem;
+  }
+  
+  .col-4, .col-6, .col-8 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .col-3, .col-4, .col-6, .col-8 {
+    grid-column: span 12;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+}
+
+/* 微交互效果 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 按鈕樣式 */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 工具提示 */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted var(--text-light);
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--text-color);
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 標記 */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-left: 0.5rem;
+}
+
+.badge-success {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.badge-warning {
+  background-color: #fff9c4;
+  color: #f57f17;
+}
+
+.badge-danger {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+/* 數據高亮 */
+.highlight-positive {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.highlight-negative {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* 圖表註釋 */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* 首字下沉效果 */
+.dropcap::first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  padding-top: 0.1em;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* 打印樣式 */
+@media print {
+  .navbar, .footer {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  .section {
+    box-shadow: none;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .hero {
+    height: auto;
+    background-image: none !important;
+    color: var(--text-color);
+  }
+  
+  .hero::before {
+    display: none;
+  }
+  
+  .hero-title, .hero-subtitle {
+    color: var(--text-color);
+  }
+}
