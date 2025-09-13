@@ -10,12 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '華魯恆升投資分析',
             description: '一個關於華魯恆升 (600426) 的詳細財務與策略分析。',
             url: '600426/index.html'
-        }
-        // {
-        //     title: '新專案標題',
-        //     description: '新專案的簡短描述。',
-        //     url: '新專案資料夾/檔案名.html'
-        // },
+        },
+        {
+            title: '隆機綠能 - 財務分析與投資建議報',
+            description: '一個關於隆機綠能(601012)的財務分析與投資建議報。',
+            url: '601012/index.html'
+        
+		
+		}
     ];
 
     const container = document.getElementById('project-container');
