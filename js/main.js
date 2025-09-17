@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於易方達國証機器人產業ETF(159530) 的詳細財務與策略分析。',
             url: '159530/index.html'
         },
+	    {
+            title: '科創板新能源ETF(5889600)投資分析報告',
+            description: '一個關於科創板新能源ETF(5889600) 的詳細財務與策略分析。',
+            url: '588960/index.html'
+        },
         {
             title: '隆機綠能 - 財務分析與投資建議報',
             description: '一個關於隆機綠能(601012)的財務分析與投資建議報。',
