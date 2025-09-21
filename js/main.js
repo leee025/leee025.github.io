@@ -25,8 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '隆機綠能 - 財務分析與投資建議報',
             description: '一個關於隆機綠能(601012)的財務分析與投資建議報。',
             url: '601012/index.html'
-        
-		
+		},
+		{
+            title: '曙光数创 - 財務分析與投資評估報告',
+            description: '一個關於曙光数创(872808)的財務分析與投資建議報告。',
+            url: '872808/index.html'
 		}
     ];
 
