@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
             url: '601012/index.html'
 		},
 		{
+            title: '華能國際 - 財務分析與投資評估報告',
+            description: '一個關於華能國際(600011)的財務分析與投資建議報告。',
+            url: '600011/index.html'
+		},
+		{
             title: '曙光数创 - 財務分析與投資評估報告',
             description: '一個關於曙光数创(872808)的財務分析與投資建議報告。',
             url: '872808/index.html'
