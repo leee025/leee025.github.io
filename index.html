@@ -8,11 +8,22 @@
 </head>
 <body>
     <header>
-        <h1>個股投資分析</h1>
-    </header>
+    <h1>個股投資分析</h1>
+</header>
+<div class="category-container">
+    <button class="category-btn active" data-category="all">全部</button>
+    <button class="category-btn" data-category="semiconductor">半導體</button>
+    <button class="category-btn" data-category="robot">機器人</button>
+    <button class="category-btn" data-category="pharmaceutical">醫藥</button>
+    <button class="category-btn" data-category="new-energy">新能源</button>
+    <button class="category-btn" data-category="chemical">化工</button>
+</div>
     <main id="project-container" class="container">
         <!-- 專案卡片將由 JavaScript 動態插入此處 -->
     </main>
+    <div id="pagination" class="pagination">
+        <!-- 分頁控件將由 JavaScript 動態插入此處 -->
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
