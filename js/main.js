@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於中國神華(601088)的財務分析與投資建議報告。',
             url: '601088/index.html',
             category: 'chemical'
+		},
+		{
+            title: '歌爾股份 - 2023-2025年財務報表分析 - 深度投資研究報告',
+            description: '一個關於歌爾股份(002241)的財務分析與投資建議報告。',
+            url: '002241/index.html',
+            category: 'AI'
 		}
     ];
 
