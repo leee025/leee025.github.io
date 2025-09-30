@@ -27,7 +27,8 @@ header {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .category-btn:hover {
