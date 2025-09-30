@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '中國神華 - 財務報表分析及投資建議（2023-2025）',
             description: '一個關於中國神華(601088)的財務分析與投資建議報告。',
             url: '601088/index.html',
-            category: 'semiconductor'
+            category: 'chemical'
 		}
     ];
 
