@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '浪潮資訊 - 財務報表分析與投資價值評估',
             description: '一個關於浪潮資訊(000977)的財務分析與投資建議報告。',
             url: '000977/index.html'
+		},
+		{
+            title: '歐菲光 - 財務分析與投資評估報告',
+            description: '一個關於歐菲光(002456)的財務分析與投資建議報告。',
+            url: '000977/index.html'
 		}
     ];
 
