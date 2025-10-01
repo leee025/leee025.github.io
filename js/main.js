@@ -66,6 +66,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於歌爾股份(002241)的財務分析與投資建議報告。',
             url: '002241/index.html',
             category: 'AI'
+		},
+		{
+            title: '國軒高科 - 財務分析與投資價值評估 (2023-2025)',
+            description: '一個關於國軒高科(002074)的財務分析與投資建議報告。',
+            url: '002074/index.html',
+            category: 'new-energy'
 		}
     ];
 
