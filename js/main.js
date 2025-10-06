@@ -66,6 +66,19 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於歌爾股份(002241)的財務分析與投資建議報告。',
             url: '002241/index.html',
             category: 'AI'
+		},
+		{
+<<<<<<< HEAD
+            title: '華天科技 - 財務分析報告 (2023-2025) - 投資價值評估',
+            description: '一個關於華天科技(002815)的財務分析與投資建議報告。',
+            url: '002815/index.html',
+            category: 'semiconductor'
+=======
+            title: '國軒高科 - 財務分析與投資價值評估 (2023-2025)',
+            description: '一個關於國軒高科(002074)的財務分析與投資建議報告。',
+            url: '002074/index.html',
+            category: 'new-energy'
+>>>>>>> 23e6a7037b4fd52d008589b664d99c3f26deff12
 		}
     ];
 
