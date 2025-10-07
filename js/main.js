@@ -72,6 +72,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於國軒高科(002074)的財務分析與投資建議報告。',
             url: '002074/index.html',
             category: 'new-energy'
+		},
+		{
+            title: '華天科技 - 財務分析報告 (2023-2025) - 投資價值評估',
+            description: '一個關於華天科技(002815)的財務分析與投資建議報告。',
+            url: '002815/index.html',
+            category: 'semiconductor'
 		}
     ];
 
