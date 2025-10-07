@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於華天科技(002815)的財務分析與投資建議報告。',
             url: '002815/index.html',
             category: 'semiconductor'
+		},
+		{
+            title: '天賜材料 - 財務報表分析與投資決策建議',
+            description: '一個關於天賜材料(002709)的財務分析與投資建議報告。',
+            url: '002709/index.html',
+            category: 'new-energy'
 		}
     ];
 
