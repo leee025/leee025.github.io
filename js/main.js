@@ -84,6 +84,18 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於天賜材料(002709)的財務分析與投資建議報告。',
             url: '002709/index.html',
             category: 'new-energy'
+		},
+		{
+            title: '廣匯能源 - 投資價值分析 (2023-2025年) | 專業金融分析報告',
+            description: '一個關於廣匯能源(600256)的財務分析與投資建議報告。',
+            url: '600256/index.html',
+            category: 'new-energy'
+		},
+		{
+            title: '特變電工 - 財務報表分析與投資建議 (2023-2025年)',
+            description: '一個關於v(600089)的財務分析與投資建議報告。',
+            url: '600089/index.html',
+            category: 'new-energy'
 		}
     ];
 
