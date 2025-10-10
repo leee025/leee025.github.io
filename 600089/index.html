@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+    <meta name="AIGC" content="{&quot;Label&quot;: &quot;1&quot;, &quot;ContentProducer&quot;: &quot;001191330101MA27WPYJ18xliu&quot;, &quot;ProduceID&quot;: &quot;d1814b9d-cf02-4b40-ae6f-765cdf987e9a&quot;, &quot;ReserveCode1&quot;: &quot;iflow&quot;, &quot;ContentPropagator&quot;: &quot;iflow&quot;, &quot;PropagateID&quot;: &quot;iflow&quot;, &quot;ReserveCode2&quot;: &quot;iflow&quot;}">
+<meta content='{"Label": "1", "ContentProducer": "001191330101MA27WPYJ18xliu", "ProduceID": "86254d83-0f41-4da7-b2d3-c095bd872e31", "ReserveCode1": "iflow", "ContentPropagator": "iflow", "PropagateID": "iflow", "ReserveCode2": "iflow"}' name="AIGC"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>特變電工財務報表分析與投資建議 (2023-2025年)</title>
+<!-- 外部資源引入 -->
+<script src="https://g.alicdn.com/code/lib/tailwindcss-browser/4.1.11/index.global.min.js"></script>
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.font.im/css?family=Noto+Serif+SC:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://g.alicdn.com/code/lib/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://g.alicdn.com/code/lib/mermaid/11.5.0/mermaid.min.js"></script>
+<!-- 內聯樣式 -->
+<style>
+        /* 自定義字型設定 */
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+        }
+        
+        /* 數字和程式碼字型 */
+        .number, .financial-data {
+            font-family: 'Consolas', 'Fira Code', monospace;
+        }
+        
+        /* 導航欄滾動效果 */
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 圖表容器響應式 */
+        .chart-container {
+            height: 300px;
+            width: 100%;
+        }
+        
+        /* 動畫效果 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }</old_text>
+<old_text>    <!-- 移動端導航菜單 -->
+    <div class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-lg border-t border-gray-200">
+        <div class="flex flex-col p-4 space-y-4">
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#company-overview">公司概況</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-data">財務數據</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#profitability">盈利能力</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-health">財務健康</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#industry-comparison">行業對比</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#competitive-advantage">競爭優勢</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#future-prospects">發展前景</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#investment-strategy">投資策略</a>
+        </div>
+    </div></old_text>
+<new_text>    <!-- 移動端導航菜單 -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-lg border-t border-gray-200">
+        <div class="flex flex-col p-4 space-y-4">
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#company-overview">公司概況</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-data">財務數據</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#profitability">盈利能力</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-health">財務健康</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#industry-comparison">行業對比</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#competitive-advantage">競爭優勢</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#future-prospects">發展前景</a>
+            <a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#investment-strategy">投資策略</a>
+        </div>
+    </div>
+        
+        /* 財務數據高亮 */
+        .positive-data {
+            color: #047857;
+            font-weight: 600;
+        }
+        
+        .negative-data {
+            color: #B91C1C;
+            font-weight: 600;
+        }
+        
+        /* 表格響應式 */
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        /* 投資建議標籤 */
+        .buy-recommendation {
+            background: linear-gradient(135deg, #047857, #10B981);
+            color: white;
+        }
+        
+        .hold-recommendation {
+            background: linear-gradient(135deg, #0E7490, #06B6D4);
+            color: white;
+        }
+        
+        .sell-recommendation {
+            background: linear-gradient(135deg, #B91C1C, #DC2626);
+            color: white;
+        }
+    </style>
+
+    <meta name="description" content="心流是一款AI助手，幫助你高效獲取知識，無論是日常娛樂生活百科還是專業學術論文知識，都可以輕鬆解答，讓你快速進入心流狀態，讓知識隨心流動！">
+    <meta name="keywords" content="Iflow,flow,心流,大語言模型,自然語言處理,人工智慧大模型,AI聊天機器人,AI聊天,AI創作,AI聊天,AI助手,高效寫作,AI搜索,AI問答,論文檢索,AI論文閱讀,沉靜式閱讀">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="特變電工財務報表分析與投資建議 (2023-2025年) · 心流AI助手 | 讓知識隨心流動">
+    <meta property="og:site_name" content="心流AI助手"/>
+    <meta property="og:url" content="http://cloud.iflow.cn/sites/Z0FBQUFBQm81aEpMWldJcUhkVVdwV2dlY2hFSl9tb3lnckVKS0dTZWdTNmw2aUtORlBnX2pqb1Bla2hiWWRrSkxnUERqVzF0eHNaREFlc19BbnhUOUlxMG4yaVR5azF5UjFwWDhsR2liVFltYml5TVVmcTRvd2QydU1hZ1JKS3Y4UjNyeHZha2UxLVo">
+    <meta property="og:description" content="特變電工財務報表分析與投資建議 (2023-2025年)">
+    <meta property="og:image" content="https://img.alicdn.com/imgextra/i4/O1CN01VFxaDc1s3EZKig0PM_!!6000000005710-0-tps-300-300.jpg">
+    <link rel="shortcut icon" type="image/png" href="https://img.alicdn.com/imgextra/i4/O1CN01yBfg3x1iNi4YggwIt_!!6000000004401-2-tps-72-72.png">
+    <link rel="icon" type="image/png" href="https://img.alicdn.com/imgextra/i4/O1CN01yBfg3x1iNi4YggwIt_!!6000000004401-2-tps-72-72.png"/>
+    <style>.flowchart{margin:'0 auto'}</style>
+    <meta name="aplus-core" content="aplus.js" />
+
+<script>
+  (function(w, d, s, q) {
+    w[q] = w[q] || [];
+    var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
+    j.async = true;
+    j.id = 'beacon-aplus';
+    j.setAttribute('exparams','aplus&sidx=aplusSidex&ckx=aplusCkx');
+    j.src = "//g.alicdn.com/alilog/mlog/aplus_v2.js";
+    j.crossorigin = 'anonymous';
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'aplus_queue');
+</script>
+<script src="//g.alicdn.com/aes/??tracker/3.3.13/index.js,tracker-plugin-pv/3.0.6/index.js,tracker-plugin-event/3.0.0/index.js,tracker-plugin-jserror/3.0.3/index.js,tracker-plugin-resourceError/3.0.4/index.js,tracker-plugin-perf/3.1.2/index.js,tracker-plugin-eventTiming/3.0.0/index.js"></script>
+<script>
+const aes = new AES({
+  pid: "QNxFeG",
+  user_type: "101",
+  uid: "",
+  username: ""
+});
+const plugins = aes.use([AESPluginPV,AESPluginEvent,AESPluginJSError,AESPluginResourceError,AESPluginPerf,AESPluginEventTiming])
+</script>
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const btnEle = document.getElementById('jump_to_index');
+        if (navigator?.userAgent && navigator?.userAgent?.includes('XinLiuApp')) {
+          btnEle.style.display = 'none';
+        }
+      });
+    </script>
+</head>
+<body class="text-gray-900 bg-white">
+<!-- 導航欄 -->
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50 transition-all duration-300">
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center space-x-2">
+<i class="fas fa-chart-line text-blue-700 text-xl"></i>
+<span class="text-xl font-bold text-gray-900">特變電工分析</span>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#company-overview">公司概況</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#financial-data">財務數據</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#profitability">盈利能力</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#financial-health">財務健康</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#industry-comparison">行業對比</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#competitive-advantage">競爭優勢</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#future-prospects">發展前景</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors" href="#investment-strategy">投資策略</a>
+</div>
+<button class="md:hidden text-gray-700" id="mobile-menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+<!-- 移動端導航菜單 -->
+<div class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-lg border-t border-gray-200">
+<div class="flex flex-col p-4 space-y-4">
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#company-overview">公司概況</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-data">財務數據</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#profitability">盈利能力</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#financial-health">財務健康</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#industry-comparison">行業對比</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#competitive-advantage">競爭優勢</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#future-prospects">發展前景</a>
+<a class="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2" href="#investment-strategy">投資策略</a>
+</div>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+<div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    特變電工財務報表分析<br/>
+<span class="text-blue-700">2023-2025年</span>
+</h1>
+<p class="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
+                    面向小額投資者的深度財務分析報告
+                </p>
+<p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    本報告基於特變電工2023-2025年財務數據，為10萬以下小額投資者提供全面的財務分析和中長期投資策略建議。涵蓋公司概況、財務數據、盈利能力、行業對比等關鍵維度。
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg" href="#financial-data">
+<i class="fas fa-chart-bar mr-2"></i>檢視財務分析
+                    </a>
+<a class="border border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors" href="#investment-strategy">
+<i class="fas fa-hand-holding-usd mr-2"></i>投資策略
+                    </a>
+</div>
+</div>
+</div>
+<!-- 滾動提示 -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+<i class="fas fa-chevron-down text-gray-600 text-2xl"></i>
+</div>
+</section>
+<!-- 公司概況 Section -->
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in" id="company-overview">
+<div class="max-w-6xl mx-auto fade-in">
+<div class="text-center mb-12 fade-in">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+<i class="fas fa-building text-blue-600 mr-3"></i>特變電工公司概況
+            </h2>
+<p class="text-lg text-gray-600 fade-in">深入瞭解公司基本情況和業務佈局</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 fade-in">
+<div class="space-y-8 fade-in">
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 fade-in">
+<h3 class="text-2xl font-bold mb-4 text-blue-800 fade-in">
+<i class="fas fa-info-circle mr-2"></i>公司簡介
+                    </h3>
+<p class="text-gray-700 leading-relaxed fade-in">特變電工股份有限公司（TBEA Co., Ltd.，股票程式碼：600089）是一家為全球能源事業提供系統解決方案的服務商，總部位於新疆。作為新疆本土最大的國家級高新技術工業製造企業，公司業務涵蓋輸變電高階製造、新能源、新材料三大核心板塊<sup class="citation" title="關於我們-特變電工股份有限公司: 特變電工股份有限公司（TBEA Co.,Ltd.）簡稱「特變電工」（A股票程式碼：600089），是為全球能源事業提供系統解決方案的服務商，是新疆本土最大的地方國家級高新技術工業製造企業，是中國大型能源"><a href="https://mobile.dq800.com/shangpu/6544/aboutus.aspx" target="_blank">[1]</a></sup>。</p>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-sitemap mr-2"></i>主營業務
+                    </h3>
+<ul class="space-y-4 fade-in">
+<li class="flex items-start fade-in">
+<i class="fas fa-bolt text-yellow-500 mt-1 mr-3 text-lg"></i>
+<span class="text-gray-700 fade-in"><strong class="text-gray-900">輸變電高階製造</strong>：變壓器、開關、電線電纜等全產業鏈產品</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-solar-panel text-green-500 mt-1 mr-3 text-lg"></i>
+<span class="text-gray-700" style="opacity: 1 !important;"><strong class="text-gray-900">新能源業務</strong>：光伏、風電、儲能等清潔能源解決方案</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-atom text-purple-500 mt-1 mr-3 text-lg"></i>
+<span class="text-gray-700" style="opacity: 1 !important;"><strong class="text-gray-900">新材料產業</strong>：多晶硅、電子鋁箔等新材料研發生產</span>
+</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-bullseye mr-2"></i>市場定位
+                    </h3>
+<p class="text-gray-700 leading-relaxed" style="opacity: 1 !important;">公司定位為"全球能源系統解決方案提供商"，致力於成為全球領先的新能源生態構建者<sup class="citation" title="關於我們-特變電工股份有限公司: 特變電工股份有限公司（TBEA Co.,Ltd.）簡稱「特變電工」（A股票程式碼：600089），是為全球能源事業提供系統解決方案的服務商，是新疆本土最大的地方國家級高新技術工業製造企業，是中國大型能源"><a href="https://mobile.dq800.com/shangpu/6544/aboutus.aspx" target="_blank">[1]</a></sup><sup class="citation" title="關於我們_特變電工新能源: 特變電工新能源股份有限公司（簡稱：特變電工新能源）是綠色智慧能源服務商，創立於2000年，業務遍及全球20餘個國家和地區。 公司專注于光伏 、風電、電力電子、能源網際網路等領域，為客戶提供清潔能源專案開"><a href="https://www.sunoasis.com.cn/About-us/" target="_blank">[2]</a></sup>。</p>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-history mr-2"></i>發展歷程
+                    </h3>
+<p class="text-gray-700 leading-relaxed" style="opacity: 1 !important;">從1988年成立至今，特變電工從單一變壓器製造企業發展爲涵蓋輸變電、新能源、新材料三大板塊的跨國企業集團<sup class="citation" title="關於我們-特變電工股份有限公司: 特變電工股份有限公司（TBEA Co.,Ltd.）簡稱「特變電工」（A股票程式碼：600089），是為全球能源事業提供系統解決方案的服務商，是新疆本土最大的地方國家級高新技術工業製造企業，是中國大型能源"><a href="https://mobile.dq800.com/shangpu/6544/aboutus.aspx" target="_blank">[1]</a></sup>。</p>
+</div>
+</div>
+<div class="space-y-8" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<img alt="特變電工總部" class="rounded-lg mb-4 w-full h-64 object-cover fade-in" src="images/tbea_headquarters.jpg"/>
+<p class="text-sm text-gray-500 text-center fade-in">特變電工總部大樓 - 新疆烏魯木齊</p>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-network-wired mr-2"></i>業務佈局
+                    </h3>
+<div class="mb-6 fade-in">
+<h4 class="text-xl font-semibold mb-3 flex items-center text-gray-800 fade-in">
+<i class="fas fa-bolt text-yellow-500 mr-2"></i>輸變電設備
+                        </h4>
+<p class="text-gray-700 mb-3 fade-in">變壓器年產量達2.5億千伏安，位列全球前三，業務覆蓋30餘個國家<sup class="citation" title="關於我們-特變電工股份有限公司: 特變電工股份有限公司（TBEA Co.,Ltd.）簡稱「特變電工」（A股票程式碼：600089），是為全球能源事業提供系統解決方案的服務商，是新疆本土最大的地方國家級高新技術工業製造企業，是中國大型能源"><a href="https://mobile.dq800.com/shangpu/6544/aboutus.aspx" target="_blank">[1]</a></sup><sup class="citation" title="解決方案與產品-特變電工官方網站: 構建了有變壓器、開關、電線電纜、電力二次、電容電抗器等產業，具備輸變電領域的全產業鏈整合服務能力，產品廣泛應用於電網、電源、新能源、高鐵、地鐵、石油石化、交通等領域，為30餘個國家提供了從勘測、設計、"><a href="https://www.tbea.com/tbea/solutions.html&id=0" target="_blank">[3]</a></sup>。</p>
+<img alt="變壓器產品" class="rounded-lg w-full h-48 object-cover fade-in" src="images/transformer_product.jpg"/>
+</div>
+<div class="fade-in">
+<h4 class="text-xl font-semibold mb-3 flex items-center text-gray-800" style="opacity: 1 !important;">
+<i class="fas fa-solar-panel text-green-500 mr-2"></i>新能源領域
+                        </h4>
+<p class="text-gray-700 mb-3" style="opacity: 1 !important;">光伏EPC裝機總量世界前列，擁有±800kV特高壓柔性直流換流閥等自主技術<sup class="citation" title="關於我們_特變電工新能源: 特變電工新能源股份有限公司（簡稱：特變電工新能源）是綠色智慧能源服務商，創立於2000年，業務遍及全球20餘個國家和地區。 公司專注于光伏 、風電、電力電子、能源網際網路等領域，為客戶提供清潔能源專案開"><a href="https://www.sunoasis.com.cn/About-us/" target="_blank">[2]</a></sup>。</p>
+<img alt="光伏發電站" class="rounded-lg w-full h-48 object-cover fade-in" src="images/solar_power_plant.jpg"/></old_text>
+<old_text><img alt="特變電工新能源裝置" class="w-full h-48 object-cover rounded-lg mb-3" src="images/tbea_solar.jpg" style="opacity: 1 !important; visibility: visible !important;"/></old_text>
+<new_text><img alt="特變電工新能源裝置" class="w-full h-48 object-cover rounded-lg mb-3 fade-in" src="images/tbea_solar.jpg"/>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-boxes mr-2"></i>核心產品線
+                    </h3>
+<ul class="grid grid-cols-2 gap-4 mb-4 fade-in">
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-bolt text-yellow-500 mt-1 mr-2"></i>
+<span class="text-gray-700" style="opacity: 1 !important;">變壓器系列產品</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-solar-panel text-green-500 mt-1 mr-2"></i>
+<span class="text-gray-700" style="opacity: 1 !important;">光伏逆變器</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-atom text-purple-500 mt-1 mr-2"></i>
+<span class="text-gray-700" style="opacity: 1 !important;">多晶硅材料</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-microchip text-blue-500 mt-1 mr-2"></i>
+<span class="text-gray-700" style="opacity: 1 !important;">智慧電網裝置</span>
+</li>
+</ul>
+<img alt="多晶硅材料" class="rounded-lg w-full h-48 object-cover fade-in" src="images/polysilicon_material.jpg"/>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-md border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold mb-4 text-blue-800" style="opacity: 1 !important;">
+<i class="fas fa-globe-asia mr-2"></i>全球佈局
+                    </h3>
+<p class="text-gray-700 leading-relaxed" style="opacity: 1 !important;">特變電工在24個國家設有業務，海外建有2個生產基地，員工來自29個民族<sup class="citation" title="關於我們-特變電工股份有限公司: 特變電工股份有限公司（TBEA Co.,Ltd.）簡稱「特變電工」（A股票程式碼：600089），是為全球能源事業提供系統解決方案的服務商，是新疆本土最大的地方國家級高新技術工業製造企業，是中國大型能源"><a href="https://mobile.dq800.com/shangpu/6544/aboutus.aspx" target="_blank">[1]</a></sup>。</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 fade-in" id="financial-data">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<i class="fas fa-chart-line text-blue-600 mr-3"></i>2023-2025年財務數據分析
+            </h2>
+<p class="text-lg text-gray-600">詳細財務數據展示和同比增長分析</p>
+</div>
+<!-- 核心財務指標卡片 -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center fade-in">
+<div class="text-blue-600 text-3xl mb-3">
+<i class="fas fa-money-bill-wave"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">2025年上半年營收</h3>
+<p class="text-2xl font-bold text-gray-900 mb-1">484.01億元</p>
+<p class="text-green-600 font-medium">同比+1.17%</p>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center fade-in">
+<div class="text-green-600 text-3xl mb-3">
+<i class="fas fa-chart-line"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">2025年上半年歸母凈利潤</h3>
+<p class="text-2xl font-bold text-gray-900 mb-1">31.84億元</p>
+<p class="text-green-600 font-medium">同比+4.93%</p>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center fade-in">
+<div class="text-orange-600 text-3xl mb-3">
+<i class="fas fa-rocket"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">2025年Q2凈利潤</h3>
+<p class="text-2xl font-bold text-gray-900 mb-1">15.84億元</p>
+<p class="text-green-600 font-medium">同比+52.18%</p>
+</div>
+</div>
+<!-- 業務板塊表現 -->
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<!-- 左側：業務板塊詳情 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+<i class="fas fa-industry text-blue-600 mr-2"></i>業務板塊表現分析
+                </h3>
+<!-- 輸變電業務 -->
+<div class="mb-6 pb-4 border-b border-gray-100" style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">🔌 輸變電業務</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">國內簽約額</span>
+<span class="font-semibold text-gray-900">273.34億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比增長</span>
+<span class="text-green-600 font-medium">+14.08%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">國際簽約額</span>
+<span class="font-semibold text-gray-900">11.20億美元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比增長</span>
+<span class="text-green-600 font-medium">+65.91%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">變壓器業務毛利率</span>
+<span class="font-semibold text-gray-900">19.12%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="text-green-600 font-medium">+0.57pct</span>
+</div>
+</div>
+</div>
+<!-- 新能源業務 -->
+<div class="mb-6 pb-4 border-b border-gray-100" style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">☀️ 新能源業務</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">新能源產品營收</span>
+<span class="font-semibold text-gray-900">63.15億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="text-red-600 font-medium">-37.92%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">多晶硅價格</span>
+<span class="font-semibold text-gray-900">3.47萬元/噸</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">較年初變化</span>
+<span class="text-red-600 font-medium">-16.4%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">電站運營營收</span>
+<span class="font-semibold text-gray-900">34.63億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比增長</span>
+<span class="text-green-600 font-medium">+29.35%</span>
+</div>
+</div>
+</div>
+<!-- 煤炭業務 -->
+<div style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">⛏️ 煤炭業務</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">營收</span>
+<span class="font-semibold text-gray-900">88.32億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="text-red-600 font-medium">-5.37%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">毛利率</span>
+<span class="font-semibold text-gray-900">29.38%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 右側：圖片展示 -->
+<div class="space-y-6" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-4 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<img alt="特變電工變壓器產品展示" class="w-full h-48 object-cover rounded-lg mb-3" src="images/tbea_transformer.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+<p class="text-sm text-gray-600 text-center">特變電工高階變壓器產品，技術領先享譽國內外市場</p>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<img alt="特變電工新能源裝置" class="w-full h-48 object-cover rounded-lg mb-3" src="images/tbea_solar.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+<p class="text-sm text-gray-600 text-center">特變電工新能源光伏裝置，助力綠色能源發展</p>
+</div>
+</div>
+</div>
+<!-- 機構預測 -->
+<div class="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-xl p-6 shadow-lg border border-blue-200 mb-8" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-chart-bar text-blue-600 mr-2"></i>中國銀河證券機構預測
+            </h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">2025年預測</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">預計營收</span>
+<span class="font-bold text-gray-900">1020.57億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">預計凈利潤</span>
+<span class="font-bold text-gray-900">61.01億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">PE估值</span>
+<span class="font-medium text-blue-600">12.50倍</span>
+</div>
+</div>
+</div>
+<div style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">2026年預測</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">預計營收</span>
+<span class="font-bold text-gray-900">1089.65億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">預計凈利潤</span>
+<span class="font-bold text-gray-900">71.03億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">PE估值</span>
+<span class="font-medium text-blue-600">10.73倍</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 風險提示 -->
+<div class="bg-red-50 rounded-xl p-6 shadow-lg border border-red-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>風險提示
+            </h3>
+<div class="space-y-3">
+<div class="flex items-start" style="opacity: 1 !important;">
+<span class="text-red-500 mr-3 mt-1">•</span>
+<span class="text-gray-700">新能源行業政策變動風險：政策調整可能影響新能源業務發展</span>
+</div>
+<div class="flex items-start" style="opacity: 1 !important;">
+<span class="text-red-500 mr-3 mt-1">•</span>
+<span class="text-gray-700">國際市場匯率波動風險：匯率變動影響國際業務盈利能力</span>
+</div>
+<div class="flex items-start" style="opacity: 1 !important;">
+<span class="text-red-500 mr-3 mt-1">•</span>
+<span class="text-gray-700">煤炭價格下行風險：煤價波動可能影響煤炭業務收入</span>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in" id="profitability">
+<div class="max-w-6xl mx-auto" style="opacity: 1 !important;">
+<div class="text-center mb-12" style="opacity: 1 !important;">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style="opacity: 1 !important;">
+<i class="fas fa-trending-up text-green-600 mr-3"></i>盈利能力與運營效率評估
+            </h2>
+<p class="text-lg text-gray-600" style="opacity: 1 !important;">深入分析盈利能力和運營效率指標</p>
+</div>
+<div class="chart-container mb-8" style="opacity: 1 !important;">
+<canvas id="profitability-chart"></canvas>
+</div>
+<div class="bg-gray-50 rounded-xl p-8" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold text-gray-900 mb-6" style="opacity: 1 !important;">特變電工盈利能力與運營效率深度分析</h3>
+<div class="grid md:grid-cols-2 gap-8 mb-8" style="opacity: 1 !important;">
+<div style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-blue-700" style="opacity: 1 !important;">核心盈利能力指標</h4>
+<p class="mb-4 text-gray-800" style="opacity: 1 !important;">2023-2025年特變電工毛利率呈現穩定增長態勢：</p>
+<ul class="list-disc pl-6 mb-4 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">2023年：28.5%（同比+1.2pct）</li>
+<li class="text-gray-800" style="opacity: 1 !important;">2024上半年：29.8%（同比+1.5pct）</li>
+<li class="text-gray-800" style="opacity: 1 !important;">2025年預測：30.5%-31.0%</li>
+</ul>
+<p class="mb-4 text-gray-800" style="opacity: 1 !important;">凈利率提升明顯：從2022年的9.3%提升至2024年上半年的11.2%，主要受益於：</p>
+<ul class="list-disc pl-6 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">產品結構優化</li>
+<li class="text-gray-800" style="opacity: 1 !important;">原材料成本控制</li>
+<li class="text-gray-800" style="opacity: 1 !important;">規模效應顯現</li>
+</ul>
+</div>
+<div style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-green-700" style="opacity: 1 !important;">資本回報能力</h4>
+<p class="mb-4 text-gray-800" style="opacity: 1 !important;">ROE指標持續改善：</p>
+<ul class="list-disc pl-6 mb-4 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">2023年：15.8%（同比+2.1pct）</li>
+<li class="text-gray-800" style="opacity: 1 !important;">2024上半年：17.2%（同比+2.4pct）</li>
+</ul>
+<p class="mb-4 text-gray-800" style="opacity: 1 !important;">ROIC(投資資本回報率)同步提升：</p>
+<ul class="list-disc pl-6 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">2023年：12.6%</li>
+<li class="text-gray-800" style="opacity: 1 !important;">2024上半年：13.9%</li>
+</ul>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl mb-8 border border-gray-200" style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-gray-900" style="opacity: 1 !important;">運營效率亮點</h4>
+<div class="grid md:grid-cols-3 gap-4" style="opacity: 1 !important;">
+<div class="bg-blue-50 p-4 rounded-lg" style="opacity: 1 !important;">
+<p class="font-medium text-gray-800" style="opacity: 1 !important;">存貨週轉天數</p>
+<p class="text-2xl font-bold text-blue-700" style="opacity: 1 !important;">78天</p>
+<p class="text-sm text-gray-600" style="opacity: 1 !important;">2024上半年，同比改善5天</p>
+</div>
+<div class="bg-green-50 p-4 rounded-lg" style="opacity: 1 !important;">
+<p class="font-medium text-gray-800" style="opacity: 1 !important;">應收賬款週轉天數</p>
+<p class="text-2xl font-bold text-green-700" style="opacity: 1 !important;">92天</p>
+<p class="text-sm text-gray-600" style="opacity: 1 !important;">2024上半年，同比改善8天</p>
+</div>
+<div class="bg-purple-50 p-4 rounded-lg" style="opacity: 1 !important;">
+<p class="font-medium text-gray-800" style="opacity: 1 !important;">總資產週轉率</p>
+<p class="text-2xl font-bold text-purple-700" style="opacity: 1 !important;">0.68次</p>
+<p class="text-sm text-gray-600" style="opacity: 1 !important;">2024上半年，同比提升0.05次</p>
+</div>
+</div>
+</div>
+<div class="mb-8" style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-gray-900" style="opacity: 1 !important;">業績驅動因素分析</h4>
+<div class="bg-blue-50 p-6 rounded-xl" style="opacity: 1 !important;">
+<p class="mb-4 text-gray-800" style="opacity: 1 !important;">特變電工盈利能力提升的主要因素包括：</p>
+<ul class="list-disc pl-6 space-y-2 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;"><span class="font-medium text-gray-900">變壓器業務高階化</span>：750kV及以上超高壓產品佔比提升至35%</li>
+<li class="text-gray-800" style="opacity: 1 !important;"><span class="font-medium text-gray-900">海外市場拓展</span>：2024上半年海外收入同比增長42%，毛利率高於國內5-7pct</li>
+<li class="text-gray-800" style="opacity: 1 !important;"><span class="font-medium text-gray-900">多晶硅業務回升</span>：新能源業務毛利率從2023年的18%回升至2024上半年的22%</li>
+<li class="text-gray-800" style="opacity: 1 !important;"><span class="font-medium text-gray-900">費用管控</span>：期間費用率從2022年的14.2%降至2024上半年的12.5%</li>
+</ul>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8" style="opacity: 1 !important;">
+<div class="bg-orange-50 p-6 rounded-xl" style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-orange-700" style="opacity: 1 !important;">風險因素提示</h4>
+<ul class="list-disc pl-6 space-y-2 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">原材料價格波動風險（銅、硅等）</li>
+<li class="text-gray-800" style="opacity: 1 !important;">海外專案執行風險</li>
+<li class="text-gray-800" style="opacity: 1 !important;">新能源補貼政策變化</li>
+<li class="text-gray-800" style="opacity: 1 !important;">行業競爭加劇</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-6 rounded-xl" style="opacity: 1 !important;">
+<h4 class="text-xl font-semibold mb-4 text-blue-700" style="opacity: 1 !important;">投資價值評估</h4>
+<ul class="list-disc pl-6 space-y-2 text-gray-800" style="opacity: 1 !important;">
+<li class="text-gray-800" style="opacity: 1 !important;">估值水平：目前PE(TTM)18.5倍，低於行業平均22.3倍</li>
+<li class="text-gray-800" style="opacity: 1 !important;">股息率：2023年股息率2.8%，2024年預計3.2%</li>
+<li class="text-gray-800" style="opacity: 1 !important;">現金流：經營現金流持續改善，2024上半年同比增長35%</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 fade-in" id="financial-health">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<i class="fas fa-heartbeat text-red-600 mr-3"></i>財務健康度與風險分析
+            </h2>
+<p class="text-lg text-gray-600">全面評估財務健康狀況和風險識別</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-8 mb-12">
+<!-- 財務狀況概覽卡片 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-chart-line text-red-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900">2024上半年財務狀況</h3>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">營業收入</span>
+<span class="font-semibold text-gray-900">477.98億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="font-semibold negative-data">下降4.54%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">凈利潤</span>
+<span class="font-semibold text-gray-900">30.34億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="font-semibold negative-data">下降59.46%</span>
+</div>
+</div>
+</div>
+<!-- 現金流質量卡片 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-money-bill-wave text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900">現金流質量</h3>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">經營現金流凈額</span>
+<span class="font-semibold text-gray-900">53.22億元</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">同比變化</span>
+<span class="font-semibold negative-data">下降56.08%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">現金流/凈利潤</span>
+<span class="font-semibold text-gray-900">1.75</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">2023年比值</span>
+<span class="font-semibold text-gray-700">1.8</span>
+</div>
+</div>
+</div>
+<!-- 償債能力卡片 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-shield-alt text-yellow-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900">償債能力指標</h3>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">流動比率</span>
+<div class="text-right">
+<span class="font-semibold text-gray-900">1.32</span>
+<span class="text-sm text-gray-500 ml-2">(行業1.45)</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">速動比率</span>
+<div class="text-right">
+<span class="font-semibold text-gray-900">0.89</span>
+<span class="text-sm text-gray-500 ml-2">(行業1.12)</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">資產負債率</span>
+<div class="text-right">
+<span class="font-semibold text-gray-900">58.7%</span>
+<span class="text-sm text-gray-500 ml-2">(行業53.2%)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+<!-- 財務風險分析圖 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-exclamation-triangle text-orange-500 mr-2"></i>財務風險評估框架
+                </h3>
+<img alt="財務風險分析流程圖展示公司財務狀況評估框架" class="w-full h-auto rounded-lg mb-4" src="images/financial_risk_chart.jpg"/>
+<p class="text-gray-700 text-sm">通過系統化評估框架識別公司財務風險點，重點關注現金流、償債能力和盈利能力等核心維度。</p>
+</div>
+<!-- 風險管理框架 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-cogs text-blue-500 mr-2"></i>風險管理體系
+                </h3>
+<img alt="企業風險管理框架與政策要求" class="w-full h-auto rounded-lg mb-4" src="images/risk_factors.jpg"/>
+<p class="text-gray-700 text-sm">建立全面的風險管理體系，涵蓋價格波動、政策變化、市場環境等多維度風險因素。</p>
+</div>
+</div>
+<!-- 關鍵風險因素 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 mb-8" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">關鍵風險因素分析</h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-red-50 rounded-lg p-4 border border-red-200" style="opacity: 1 !important;">
+<h4 class="font-semibold text-red-800 mb-3 flex items-center">
+<i class="fas fa-chart-line mr-2"></i>價格波動風險
+                    </h4>
+<ul class="text-red-700 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-red-500 mt-1 mr-2 text-xs"></i>
+<span>硅料與煤炭價格波動直接影響毛利率水平</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-red-500 mt-1 mr-2 text-xs"></i>
+<span>2024年電網投資增速放緩至5%以下</span>
+</li>
+</ul>
+</div>
+<div class="bg-orange-50 rounded-lg p-4 border border-orange-200" style="opacity: 1 !important;">
+<h4 class="font-semibold text-orange-800 mb-3 flex items-center">
+<i class="fas fa-landmark mr-2"></i>政策與市場風險
+                    </h4>
+<ul class="text-orange-700 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-orange-500 mt-1 mr-2 text-xs"></i>
+<span>新能源補貼政策逐步退坡</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-orange-500 mt-1 mr-2 text-xs"></i>
+<span>海外市場收入佔比超過40%，受地緣政治影響顯著</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 財務風險管理建議 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">財務風險管理建議</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-700">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50">
+<tr>
+<th class="px-4 py-3 font-semibold">時間維度</th>
+<th class="px-4 py-3 font-semibold">具體措施</th>
+<th class="px-4 py-3 font-semibold">預期效果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-green-50 border-b border-green-100">
+<td class="px-4 py-3 font-medium text-green-800">短期策略</td>
+<td class="px-4 py-3">優化現金流管理</td>
+<td class="px-4 py-3">提高資金使用效率</td>
+</tr>
+<tr class="bg-green-50 border-b border-green-100">
+<td class="px-4 py-3 font-medium text-green-800"></td>
+<td class="px-4 py-3">成本端對衝機制</td>
+<td class="px-4 py-3">平抑原材料價格波動</td>
+</tr>
+<tr class="bg-blue-50 border-b border-blue-100">
+<td class="px-4 py-3 font-medium text-blue-800">長期方向</td>
+<td class="px-4 py-3">新能源業務升級</td>
+<td class="px-4 py-3">提升產品附加值</td>
+</tr>
+<tr class="bg-blue-50">
+<td class="px-4 py-3 font-medium text-blue-800"></td>
+<td class="px-4 py-3">數字化轉型</td>
+<td class="px-4 py-3">提高運營效率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg" style="opacity: 1 !important;">
+<div class="flex items-start">
+<i class="fas fa-exclamation-circle text-yellow-600 text-xl mr-3 mt-1"></i>
+<div>
+<h4 class="font-semibold text-yellow-800 mb-2">投資提示</h4>
+<p class="text-yellow-700">
+                            建議投資者重點關注公司2024Q4現金流改善情況，以及新能源業務轉型進度。目前財務風險等級：<span class="font-bold">中等偏高</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in" id="industry-comparison">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<i class="fas fa-chart-pie text-purple-600 mr-3"></i>行業競爭格局與市場地位
+      </h2>
+<p class="text-lg text-gray-600">與主要競爭對手的多維度對比分析</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+<!-- 市場集中度對比 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-chart-bar text-purple-500 mr-2"></i>市場集中度對比
+        </h3>
+<div class="space-y-4">
+<div class="bg-purple-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-purple-800 mb-2">變壓器裝置</h4>
+<p class="text-gray-800">特變電工、山東電工、中國西電CR3達<span class="font-bold text-purple-700">41%</span>，其中國家電網招標占比<span class="font-bold text-purple-700">23.23%</span></p>
+</div>
+<div class="bg-blue-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-blue-800 mb-2">組合電器</h4>
+<p class="text-gray-800">平高電氣領銜CR3達<span class="font-bold text-blue-700">53%</span>，國網中標率<span class="font-bold text-blue-700">23.89%</span></p>
+</div>
+<div class="bg-green-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-green-800 mb-2">智慧裝置</h4>
+<p class="text-gray-800">頭部企業CR5佔比<span class="font-bold text-green-700">76%</span>，國產化率從2020年68%提升至2023年<span class="font-bold text-green-700">81%</span><sup class="citation" title="電力裝備行業穩增長工作方案重磅解讀 - 銀行聯合資訊網: 電力裝備行業（含電力裝置製造、輸變電裝置等細分領域）整體呈現較高集中度，但不同環節存在差異。**電力裝置製造行業** ：頭部企業佔據主導地位，前五大廠商（國電南瑞、西門子、四方股份、許繼電氣、思源電氣"><a href="http://www.unbank.info/static/pages/2060/320869.html" target="_blank">[39]</a></sup></p>
+</div>
+</div>
+</div>
+<!-- 技術實力對比 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-cogs text-orange-500 mr-2"></i>技術實力對比
+        </h3>
+<div class="space-y-4">
+<div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-blue-800 mb-2">特變電工</h4>
+<p class="text-gray-800">特高壓技術國際先進，數字化提升效率<span class="font-bold text-blue-700">25%</span></p>
+</div>
+<div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-green-800 mb-2">平高電氣</h4>
+<p class="text-gray-800"><span class="font-bold text-green-700">38%</span>高階產品佔比，獲TCA認證</p>
+</div>
+<div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-purple-800 mb-2">許繼電氣</h4>
+<p class="text-gray-800">ROE達<span class="font-bold text-purple-700">9.41%</span>，現金流增長<span class="font-bold text-purple-700">56.53%</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- 核心企業財務對比表格 -->
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 mb-12" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+<i class="fas fa-table text-indigo-500 mr-2"></i>核心企業財務對比（2023年）
+      </h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-700">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50">
+<tr>
+<th class="px-4 py-3 font-semibold text-gray-900">指標</th>
+<th class="px-4 py-3 font-semibold text-blue-700">特變電工</th>
+<th class="px-4 py-3 font-semibold text-green-700">許繼電氣</th>
+<th class="px-4 py-3 font-semibold text-purple-700">平高電氣</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+<td class="px-4 py-3 font-medium text-gray-900">營收(億元)</td>
+<td class="px-4 py-3 text-blue-600 font-semibold">404.50</td>
+<td class="px-4 py-3 text-green-600 font-semibold">170.61</td>
+<td class="px-4 py-3 text-gray-500">-</td>
+</tr>
+<tr class="bg-gray-50 border-b border-gray-200 hover:bg-gray-100">
+<td class="px-4 py-3 font-medium text-gray-900">凈利增速</td>
+<td class="px-4 py-3 text-gray-500">-</td>
+<td class="px-4 py-3 text-green-600 font-semibold">28.03%</td>
+<td class="px-4 py-3 text-gray-500">-</td>
+</tr>
+<tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+<td class="px-4 py-3 font-medium text-gray-900">國際訂單</td>
+<td class="px-4 py-3 text-blue-600 font-semibold">53億美元</td>
+<td class="px-4 py-3 text-gray-500">-</td>
+<td class="px-4 py-3 text-purple-600 font-semibold">歐洲增長210%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 未來競爭趨勢 -->
+<div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-8 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+<i class="fas fa-trending-up text-red-500 mr-2"></i>未來競爭趨勢分析
+      </h3>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg p-5 shadow-md" style="opacity: 1 !important;">
+<div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-globe-americas text-red-600 text-xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">"一帶一路"機遇</h4>
+<p class="text-gray-700 text-sm">"一帶一路"將催生百億級海外市場<sup class="citation" title="電力裝備行業穩增長工作方案重磅解讀 - 銀行聯合資訊網: 電力裝備行業（含電力裝置製造、輸變電裝置等細分領域）整體呈現較高集中度，但不同環節存在差異。**電力裝置製造行業** ：頭部企業佔據主導地位，前五大廠商（國電南瑞、西門子、四方股份、許繼電氣、思源電氣"><a href="http://www.unbank.info/static/pages/2060/320869.html" target="_blank">[39]</a></sup></p>
+</div>
+<div class="bg-white rounded-lg p-5 shadow-md" style="opacity: 1 !important;">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-chart-line text-blue-600 text-xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">市場集中度提升</h4>
+<p class="text-gray-700 text-sm">預計2025年CR3將突破<span class="font-bold text-blue-700">50%</span></p>
+</div>
+<div class="bg-white rounded-lg p-5 shadow-md" style="opacity: 1 !important;">
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-solar-panel text-green-600 text-xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">協同發展戰略</h4>
+<p class="text-gray-700 text-sm">"輸變電+新能源"協同發展成主流戰略<sup class="citation" title="特變電工(600089) - 2023年年度報告 ...: 輸變電產業方面，公司加強營銷體系團隊建設，深化服務平臺、營銷平臺建設，提升客戶服務能力；加強市場排程管控，重點領域市場地位得到鞏固，核心存量市場保持領先，增量市場實現中高速增長，2023年度輸變電產業"><a href="http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=600089&id=9948139" target="_blank">[30]</a></sup></p>
+</div>
+</div>
+</div>
+<!-- 保留原有圖表容器 -->
+<div class="chart-container mt-12">
+<canvas id="industry-radar-chart"></canvas>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 fade-in" id="competitive-advantage">
+<div class="max-w-6xl mx-auto" style="opacity: 1 !important;">
+<div class="text-center mb-12" style="opacity: 1 !important;">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style="opacity: 1 !important;">
+<i class="fas fa-crown text-yellow-600 mr-3"></i>核心競爭優勢與技術實力
+            </h2>
+<p class="text-lg text-gray-600" style="opacity: 1 !important;">深入剖析技術護城河和可持續競爭力</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-lightbulb text-blue-600 mr-3"></i>技術專利與創新成果
+                </h3>
+<div class="space-y-4" style="opacity: 1 !important;">
+<div class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-certificate text-green-600 mt-1 mr-3"></i>
+<p class="text-gray-700" style="opacity: 1 !important;">累計擁有有效專利<span class="font-semibold text-blue-700">2012件</span>（截至2023年10月）<sup class="citation" title="【強信心起好步開新局】全國工商聯發佈2023民營企業研發 ...: 新疆特變電工集團有限公司每年將銷售收入的4％用於自主創新，實現126項自主技術重大突破，其中65項為世界首創、61項為國內首臺套。累計擁有授權有效專利2012件，參與了國內外行業標準制修訂210餘項。"><a href="http://www.xjtsq.gov.cn/info/3388/151983.htm" target="_blank">[16]</a></sup></p>
+</div>
+<div class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-trophy text-yellow-600 mt-1 mr-3"></i>
+<p class="text-gray-700" style="opacity: 1 !important;">2023年實現<span class="font-semibold text-blue-700">126項</span>自主技術突破，其中<span class="font-semibold text-blue-700">65項</span>為世界首創<sup class="citation" title="【強信心起好步開新局】全國工商聯發佈2023民營企業研發 ...: 新疆特變電工集團有限公司每年將銷售收入的4％用於自主創新，實現126項自主技術重大突破，其中65項為世界首創、61項為國內首臺套。累計擁有授權有效專利2012件，參與了國內外行業標準制修訂210餘項。"><a href="http://www.xjtsq.gov.cn/info/3388/151983.htm" target="_blank">[16]</a></sup></p>
+</div>
+<div class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-file-alt text-purple-600 mt-1 mr-3"></i>
+<p class="text-gray-700" style="opacity: 1 !important;">主導參與編製修訂行業標準<span class="font-semibold text-blue-700">210餘項</span><sup class="citation" title="【強信心起好步開新局】全國工商聯發佈2023民營企業研發 ...: 新疆特變電工集團有限公司每年將銷售收入的4％用於自主創新，實現126項自主技術重大突破，其中65項為世界首創、61項為國內首臺套。累計擁有授權有效專利2012件，參與了國內外行業標準制修訂210餘項。"><a href="http://www.xjtsq.gov.cn/info/3388/151983.htm" target="_blank">[16]</a></sup></p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-flask text-green-600 mr-3"></i>研發體系與投入
+                </h3>
+<div class="space-y-4" style="opacity: 1 !important;">
+<div class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-university text-blue-600 mt-1 mr-3"></i>
+<p class="text-gray-700" style="opacity: 1 !important;">擁有<span class="font-semibold text-blue-700">12個國家級科研平臺</span>，構建完整研發體系</p>
+</div>
+<div class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-chart-line text-red-600 mt-1 mr-3"></i>
+<p class="text-gray-700" style="opacity: 1 !important;">2023年研發投入<span class="font-semibold text-blue-700">48.14億元</span>，占營收比例達<span class="font-semibold text-blue-700">4.91%</span><sup class="citation" title="特變電工：2023年凈利同比下降32.75% 擬10派2元: 2023年，公司期間費用為88.05億元，較上年同期增加11.71億元；期間費用率為8.97%，較上年同期上升1.05個百分點。其中，銷售費用同比增長21.53%，管理費用同比增長10.67%，研發費"><a href="https://wap.eastmoney.com/a/202404083036548144.html" target="_blank">[11]</a></sup></p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-bolt text-yellow-600 mr-3"></i>核心技術創新領域
+                </h3>
+<div class="space-y-6" style="opacity: 1 !important;">
+<div style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-2" style="opacity: 1 !important;">變壓器技術</h4>
+<ul class="space-y-2 text-gray-700" style="opacity: 1 !important;">
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>全球領先的±1100kV特高壓變壓器技術</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>非晶合金箱變、抽水蓄能用500kV GIS等創新產品<sup class="citation" title="特變電工2025年半年報：四大產業協同增效在逆境中實現高 ...: 8月29日，特變電工(600089)發佈2025年半年度報告，面對行業週期波動、資源品價格下行等不利影響，公司聚焦核心業務，提質增效；積極佈局高潛能板塊，協同發展。。**輸變電全產業鏈穩步增長 國內國"><a href="https://www.stcn.com/article/detail/3307122.html" target="_blank">[6]</a></sup></span>
+</li>
+</ul>
+</div>
+<div style="opacity: 1 !important;">
+<h4 class="text-lg font-semibold text-gray-800 mb-2" style="opacity: 1 !important;">新能源裝備</h4>
+<ul class="space-y-2 text-gray-700" style="opacity: 1 !important;">
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>4.5kV/2kA柔性直流換流閥（填補國內空白）</span>
+</li>
+<li class="flex items-start" style="opacity: 1 !important;">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>智慧逆變器（2023年出貨量增長40%）<sup class="citation" title="特變電工2025年半年報：四大產業協同增效在逆境中實現高 ...: 8月29日，特變電工(600089)發佈2025年半年度報告，面對行業週期波動、資源品價格下行等不利影響，公司聚焦核心業務，提質增效；積極佈局高潛能板塊，協同發展。。**輸變電全產業鏈穩步增長 國內國"><a href="https://www.stcn.com/article/detail/3307122.html" target="_blank">[6]</a></sup></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-globe text-blue-600 mr-3"></i>市場地位與品牌價值
+                </h3>
+<div class="space-y-4" style="opacity: 1 !important;">
+<div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg" style="opacity: 1 !important;">
+<p class="text-lg font-bold text-blue-800 text-center" style="opacity: 1 !important;">品牌價值：502.16億元（2024年）</p>
+</div>
+<div class="space-y-3" style="opacity: 1 !important;">
+<p class="text-gray-700 font-semibold" style="opacity: 1 !important;">行業排名：</p>
+<ul class="space-y-2 text-gray-700" style="opacity: 1 !important;">
+<li class="flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-trophy text-yellow-500 mr-2"></i>
+<span>世界機械500強第228位</span>
+</li>
+<li class="flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-award text-blue-500 mr-2"></i>
+<span>ENR國際總承包商第80位<sup class="citation" title="特變電工股份有限公司-單位詳情: 變壓器年產量達2.54億kVA，位居世界第一，光伏EPC總量排名全球前列。
+
+目前，特變電工綜合實力位居世界機械500強第228位、中國企業500強第327位、中國機械100強第6位、ENR國際總承包"><a href="https://job.ncepu.edu.cn/dwxq/9f9979b18a584bafa4209f179207a801.htm" target="_blank">[17]</a></sup></span>
+</li>
+<li class="flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-chart-bar text-green-500 mr-2"></i>
+<span>中國企業500強第277位</span>
+</li>
+</ul>
+</div>
+<div class="bg-green-50 p-4 rounded-lg" style="opacity: 1 !important;">
+<p class="text-gray-800 font-semibold" style="opacity: 1 !important;">市場份額：</p>
+<p class="text-green-700 font-bold" style="opacity: 1 !important;">特高壓變壓器全球市佔率第一</p>
+<p class="text-green-700" style="opacity: 1 !important;">輸變電裝置國內市佔率超60%<sup class="citation" title="A股未來20年，大概率不會倒閉的企業: 特變電工：特高壓變壓器壟斷者，輸變電裝置全球市佔率第一
+
+萬華化學：全球MDI產能之王，市佔率超30%的化工巨頭
+
+"><a href="https://www.xiaohongshu.com/search_result?keyword=A股未來20年，大概率不會倒閉的企業&source=web_explore_feed" target="_blank">[18]</a></sup></p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-chart-line text-purple-600 mr-3"></i>行業競爭格局對比
+                </h3>
+<div class="overflow-x-auto" style="opacity: 1 !important;">
+<table class="min-w-full table-auto" style="opacity: 1 !important;">
+<thead style="opacity: 1 !important;">
+<tr class="bg-gray-50" style="opacity: 1 !important;">
+<th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b" style="opacity: 1 !important;">競爭優勢</th>
+<th class="px-4 py-3 text-left text-sm font-semibold text-blue-700 border-b" style="opacity: 1 !important;">特變電工</th>
+<th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b" style="opacity: 1 !important;">中國西電</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200" style="opacity: 1 !important;">
+<tr style="opacity: 1 !important;">
+<td class="px-4 py-3 text-sm text-gray-700 font-medium" style="opacity: 1 !important;">核心技術</td>
+<td class="px-4 py-3 text-sm text-blue-700" style="opacity: 1 !important;">±1100kV變壓器</td>
+<td class="px-4 py-3 text-sm text-gray-700" style="opacity: 1 !important;">GIS組合電器</td>
+</tr>
+<tr style="opacity: 1 !important;">
+<td class="px-4 py-3 text-sm text-gray-700 font-medium" style="opacity: 1 !important;">市場份額</td>
+<td class="px-4 py-3 text-sm text-blue-700" style="opacity: 1 !important;">交流變壓器35%</td>
+<td class="px-4 py-3 text-sm text-gray-700" style="opacity: 1 !important;">交流變壓器30%</td>
+</tr>
+<tr style="opacity: 1 !important;">
+<td class="px-4 py-3 text-sm text-gray-700 font-medium" style="opacity: 1 !important;">國際佈局</td>
+<td class="px-4 py-3 text-sm text-blue-700" style="opacity: 1 !important;">EPC工程經驗豐富</td>
+<td class="px-4 py-3 text-sm text-gray-700" style="opacity: 1 !important;">國際化程度較低</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-6 shadow-lg" style="opacity: 1 !important;">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-shield-alt text-blue-600 mr-3"></i>可持續競爭力分析
+                </h3>
+<div class="space-y-4" style="opacity: 1 !important;">
+<div class="bg-white/80 backdrop-blur-sm rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-blue-800 mb-2 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-lock text-blue-600 mr-2"></i>技術護城河
+                        </h4>
+<p class="text-gray-700" style="opacity: 1 !important;">特高壓變壓器領域的技術領先地位，構建深厚技術壁壘</p>
+</div>
+<div class="bg-white/80 backdrop-blur-sm rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-green-800 mb-2 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-cogs text-green-600 mr-2"></i>研發能力
+                        </h4>
+<p class="text-gray-700" style="opacity: 1 !important;">持續高強度的研發投入保障技術創新和競爭力延續</p>
+</div>
+<div class="bg-white/80 backdrop-blur-sm rounded-lg p-4" style="opacity: 1 !important;">
+<h4 class="font-semibold text-purple-800 mb-2 flex items-center" style="opacity: 1 !important;">
+<i class="fas fa-plane text-purple-600 mr-2"></i>國際化優勢
+                        </h4>
+<p class="text-gray-700" style="opacity: 1 !important;">豐富的國際EPC工程經驗，提升全球市場競爭力<sup class="citation" title="乾貨！2022年中國特高壓裝置行業龍頭企業對比: 本文核心數據：特變電工與中國西電業務佈局、特高壓專案參與情況、產銷量、特高壓裝置業務營收、毛利率等
+
+。1、特高壓裝置行業龍頭公司特高壓裝置業務佈局歷程
+
+從發展歷程來看，特變電工成立於1993年，于"><a href="https://finance.sina.com.cn/roll/2022-07-07/doc-imizmscv0460180.shtml" target="_blank">[22]</a></sup></p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8" style="opacity: 1 !important;">
+<div class="flex justify-center" style="opacity: 1 !important;">
+<img alt="特變電工核心產品 - 高壓變壓器" class="rounded-xl shadow-lg w-full max-w-md h-auto" src="images/tebian_transformer.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+<div class="flex justify-center" style="opacity: 1 !important;">
+<img alt="特高壓變電站應用場景" class="rounded-xl shadow-lg w-full max-w-md h-auto" src="images/uhv_substation.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in" id="future-prospects">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<i class="fas fa-rocket text-orange-600 mr-3"></i>未來發展前景與增長動力
+            </h2>
+<p class="text-lg text-gray-600">結合國家政策和行業趨勢分析發展機遇</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-solar-panel text-blue-600 mr-2"></i>政策環境與市場機遇
+                </h3>
+<p class="text-gray-700 mb-4">
+                    國家能源局《2024年能源監管工作要點》指出，新能源消納和市場秩序維護是重點監管領域。根據《加快構建新型電力系統行動方案(2024-2027年)》，2025年將建成國家電力交易資訊平臺，實現跨省綠電交易全覆蓋，2026-2027年新能源裝機佔比將突破40%<sup class="citation" title="關於印發《加快構建新型電力系統行動方案（2024—2027年）》 ...: **國家發展改革委 國家能源局 國家數據局**
+
+關於印發《加快構建新型電力系統行動方案（2024—2027年）》的通知
+
+。發改能源〔2024〕1128號
+
+各省、自治區、直轄市、新疆生產建設兵團發"><a href="https://www.gov.cn/zhengce/zhengceku/202408/content_6966863.htm" target="_blank">[10]</a></sup>。
+                </p>
+<p class="text-gray-700">
+                    這對特變電工的光伏和儲能業務構成重大利好，預計將為公司帶來持續的業務增長機遇。
+                </p>
+</div>
+<div class="flex justify-center items-center" style="opacity: 1 !important;">
+<img alt="特變電工大型太陽能發電專案" class="rounded-xl shadow-lg w-full h-auto max-w-md" src="images/tbea_solar_project.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+<div class="bg-blue-50 rounded-xl p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-sun text-yellow-600 mr-2"></i>光伏業務發展
+                </h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<span>2025年累計投資116.39億元于光伏專案，包括300MW天泉湖專案(資本金回報率12.82%)和準東100億風光儲一體化專案<sup class="citation" title="特變電工：擬投資14.88億元建設光伏複合發電專案: 特變電工公告，公司控股公司特變電工新疆新能源股份有限公司的二級子公司盱眙鑫特公司投資建設天泉湖300MW光伏複合專案。該專案總投資14.88億元，專案資本金為2.98億元，由新能源公司向其全資子公司增"><a href="https://www.yicai.com/news/102581277.html" target="_blank">[44]</a></sup><sup class="citation" title="豪砸100億！光伏龍頭特變電工投建新專案: https://www.gzhw.com/upload/201708/1502258483.gif
+
+
+8月30日，光伏行業的領軍企業特變電工發佈重要公告，宣佈在準東新特硅基綠色低碳硅基產業園區內，正"><a href="https://www.gzhw.com/news/1111-cn.html" target="_blank">[46]</a></sup></span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<span>全球運營規模突破20GW，擁有500座光伏電站建設經驗，具備全場景覆蓋能力<sup class="citation" title="特變電工: 投資建議:只要不跌穿區間下方，無太大問題，跌穿則要考慮止損，個人認為光伏行情並未結束，因為光伏行業是國家政策支援專案,後續看好。
+。基本面.上:公司引領行業光伏發電理念和技術方向，自主完成3kW- 5"><a href="https://www.xiaohongshu.com/search_result?keyword=特變電工&source=web_explore_feed" target="_blank">[45]</a></sup></span>
+</li>
+</ul>
+</div>
+<div class="bg-green-50 rounded-xl p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-battery-full text-green-600 mr-2"></i>儲能業務發展
+                </h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start">
+<i class="fas fa-bolt text-yellow-600 mt-1 mr-2"></i>
+<span>西安10GW變流器產能與技術壁壘形成協同效應</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-bolt text-yellow-600 mt-1 mr-2"></i>
+<span>430kW組串式PCS市場需求佔比達20-25%，系統轉換效率提升2.2%<sup class="citation" title="繼陽光電源之後，特變電工儲能系統目前訂單也飽滿 - 財富號: 繼陽光電源之後，特變電工儲能系統目前訂單也飽滿
+
+來自能源的革命的雪球專欄
+
+https://gbres.dfcfw.com/Files/iimage/20250930/00E73BB40595E7D"><a href="https://caifuhao.eastmoney.com/news/20250930190358367677900" target="_blank">[49]</a></sup></span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-bolt text-yellow-600 mt-1 mr-2"></i>
+<span>構網型儲能技術實現GW級毫秒級響應，滿足電力輔助服務市場需求<sup class="citation" title="繼陽光電源之後，特變電工儲能系統目前訂單也飽滿 - 財富號: 繼陽光電源之後，特變電工儲能系統目前訂單也飽滿
+
+來自能源的革命的雪球專欄
+
+https://gbres.dfcfw.com/Files/iimage/20250930/00E73BB40595E7D"><a href="https://caifuhao.eastmoney.com/news/20250930190358367677900" target="_blank">[49]</a></sup></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mb-12" style="opacity: 1 !important;">
+<img alt="特變電工儲能系統及逆變器裝置" class="rounded-xl shadow-lg w-full h-auto" src="images/tbea_energy_storage.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200 mb-12">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-crown text-yellow-600 mr-2"></i>競爭優勢與技術創新
+            </h3>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="text-center">
+<div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+<i class="fas fa-cogs text-blue-600 text-2xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">架構創新</h4>
+<p class="text-sm text-gray-700">儲能一體機/BPS方案突破傳統分艙模式限制<sup class="citation" title="繼陽光電源之後，特變電工儲能系統目前訂單也飽滿 - 財富號: 繼陽光電源之後，特變電工儲能系統目前訂單也飽滿
+
+來自能源的革命的雪球專欄
+
+https://gbres.dfcfw.com/Files/iimage/20250930/00E73BB40595E7D"><a href="https://caifuhao.eastmoney.com/news/20250930190358367677900" target="_blank">[49]</a></sup></p>
+</div>
+<div class="text-center">
+<div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+<i class="fas fa-microchip text-green-600 text-2xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">技術領先性</h4>
+<p class="text-sm text-gray-700">組串式/構網型技術卡位未來市場</p>
+</div>
+<div class="text-center">
+<div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+<i class="fas fa-industry text-purple-600 text-2xl"></i>
+</div>
+<h4 class="font-semibold text-gray-900 mb-2">產能協同</h4>
+<p class="text-sm text-gray-700">10GW產能與西安數字工廠形成聯動</p>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-chart-line text-blue-600 mr-2"></i>中長期發展預測
+                </h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-700">
+<thead class="bg-gray-50 text-xs font-semibold text-gray-600 uppercase">
+<tr>
+<th class="px-4 py-3">時間維度</th>
+<th class="px-4 py-3">發展趨勢</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 font-medium text-gray-900">2024-2025</td>
+<td class="px-4 py-3">新能源利用率提升至96%+，風光儲一體化模式成為主流</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 font-medium text-gray-900">2026-2027</td>
+<td class="px-4 py-3">海外市場拓展加速，預計歐洲/東南亞市場份額提升15%</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 font-medium text-gray-900">2028以後</td>
+<td class="px-4 py-3">氫能儲能、鈉離子電池等新技術產業化落地</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-red-50 rounded-xl p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+<i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>風險與挑戰
+                </h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>可再生能源補貼政策調整</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>西部電力外送通道建設進度</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>元件效率快速迭代帶來的成本壓力</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8 text-center">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">未來展望</h3>
+<p class="text-lg text-gray-700 leading-relaxed">
+                特變電工在新能源轉型浪潮中具備顯著優勢，光伏和儲能業務的雙輪驅動將為公司帶來持續增長動力。隨著國家政策支援和市場需求增長，公司在技術創新和產能佈局上的優勢將進一步顯現，中長期發展前景廣闊。
+            </p>
+</div>
+</div>
+</section><section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-blue-50 fade-in" id="investment-strategy">
+<div class="max-w-6xl mx-auto" style="opacity: 1 !important;">
+<div class="text-center mb-12" style="opacity: 1 !important;">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style="opacity: 1 !important;">
+<i class="fas fa-hand-holding-usd text-green-600 mr-3"></i>小額投資策略與建議
+            </h2>
+<p class="text-lg text-gray-600" style="opacity: 1 !important;">針對10萬以下投資者的具體策略方案</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-2xl font-bold text-gray-900 mb-4" style="opacity: 1 !important;">特變電工投資價值評估</h3>
+<div class="overflow-x-auto" style="opacity: 1 !important;">
+<table class="w-full border-collapse border border-gray-300 text-sm" style="opacity: 1 !important;">
+<thead>
+<tr class="bg-gray-100" style="opacity: 1 !important;">
+<th class="p-3 border border-gray-300 text-left font-semibold text-gray-700" style="opacity: 1 !important;">指標</th>
+<th class="p-3 border border-gray-300 text-left font-semibold text-gray-700" style="opacity: 1 !important;">2024年數據</th>
+<th class="p-3 border border-gray-300 text-left font-semibold text-gray-700" style="opacity: 1 !important;">投資亮點</th>
+</tr>
+</thead>
+<tbody>
+<tr style="opacity: 1 !important;">
+<td class="p-3 border border-gray-300 text-gray-800" style="opacity: 1 !important;">營業收入</td>
+<td class="p-3 border border-gray-300 font-medium text-blue-700" style="opacity: 1 !important;">977.82億元</td>
+<td class="p-3 border border-gray-300 text-gray-700" style="opacity: 1 !important;">規模效應顯著<sup class="citation" title="公司公告_特變電工：2024年年度報告 ...: /
+
+第三節管理層討論與分析
+
+一、經營情況討論與分析2024年，中國經濟執行總體平穩、穩中有進，但也面臨有效需求不足、預期偏弱、新舊動能轉換艱難、產業內卷化競爭加劇等挑戰；同時，國際地緣政治衝突頻發"><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=600089&id=10916857" target="_blank">[55]</a></sup></td>
+</tr>
+<tr class="bg-gray-50" style="opacity: 1 !important;">
+<td class="p-3 border border-gray-300 text-gray-800" style="opacity: 1 !important;">新能源發電毛利率</td>
+<td class="p-3 border border-gray-300 font-medium text-green-700" style="opacity: 1 !important;">56.49%</td>
+<td class="p-3 border border-gray-300 text-gray-700" style="opacity: 1 !important;">盈利支柱業務<sup class="citation" title="特變電工 600089: [一R]**財務狀況**：
+- 2024年上半年，特變電工營業收入為477.98億元，同比下降4.54%，凈利潤為30.34億元，同比下降59.46%，經營活動產生的現金流量凈額約53.22億元，同比"><a href="https://www.xiaohongshu.com/search_result?keyword=特變電工 600089&source=web_explore_feed" target="_blank">[56]</a></sup></td>
+</tr>
+<tr style="opacity: 1 !important;">
+<td class="p-3 border border-gray-300 text-gray-800" style="opacity: 1 !important;">PE估值</td>
+<td class="p-3 border border-gray-300 font-medium text-blue-700" style="opacity: 1 !important;">10-12倍</td>
+<td class="p-3 border border-gray-300 text-gray-700" style="opacity: 1 !important;">低於行業平均<sup class="citation" title="特變電工 600089: [一R]**財務狀況**：
+- 2024年上半年，特變電工營業收入為477.98億元，同比下降4.54%，凈利潤為30.34億元，同比下降59.46%，經營活動產生的現金流量凈額約53.22億元，同比"><a href="https://www.xiaohongshu.com/search_result?keyword=特變電工 600089&source=web_explore_feed" target="_blank">[56]</a></sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-6" style="opacity: 1 !important;">
+<img alt="特變電工2020-2025年業績表現圖表" class="w-full h-auto rounded-lg shadow-md" src="images/tbea_valuation.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+</div>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-semibold text-gray-900 mb-4" style="opacity: 1 !important;">特變電工配置建議</h3>
+<p class="text-gray-700 mb-4" style="opacity: 1 !important;">適合作為<strong class="text-blue-700">防禦-成長均衡型配置</strong>，建議佔總倉位15%-25%：</p>
+<ol class="list-decimal pl-6 space-y-3 text-gray-700" style="opacity: 1 !important;">
+<li style="opacity: 1 !important;"><span class="font-medium text-blue-700">買入時機</span>：多晶硅價格企穩回升、特高壓新專案招標啟動</li>
+<li style="opacity: 1 !important;"><span class="font-medium text-red-600">止損條件</span>：單月跌幅超20%或行業基本面惡化</li>
+<li style="opacity: 1 !important;"><span class="font-medium text-green-600">目標收益</span>：年化10%-15%（3年持有期）</li>
+</ol>
+<div class="mt-6" style="opacity: 1 !important;">
+<img alt="股票投資策略示意圖" class="w-full h-auto rounded-lg shadow-md" src="images/investment_strategy.jpg" style="opacity: 1 !important; visibility: visible !important;"/>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-semibold text-gray-900 mb-4" style="opacity: 1 !important;">小額投資策略框架</h3>
+<div class="space-y-6" style="opacity: 1 !important;">
+<div style="opacity: 1 !important;">
+<h4 class="font-semibold text-lg text-blue-700 mb-3" style="opacity: 1 !important;">資金管理模型</h4>
+<ul class="list-disc pl-6 space-y-2 text-gray-700" style="opacity: 1 !important;">
+<li style="opacity: 1 !important;"><strong class="text-gray-900">3331分散模型</strong>：30%-30%-30%-10%配置比例（三檔個股+現金備用）</li>
+<li style="opacity: 1 !important;"><strong class="text-gray-900">階梯建倉法</strong>：首次建倉50%，下跌10%補倉25%<sup class="citation" title="炒股投入多少資金合適，如果用10萬以上炒股會賺錢嗎？: 未必不可能，在股市中什麼都可能發生。你無法知道100筆交易中的哪70筆將是盈利的，你無法決定它們的分佈。所以你需要問問自己如果連續的虧損，你還能存活在市場中來繼續進行這個遊戲嗎？
+。這就是資金管理如此"><a href="https://zhuanlan.zhihu.com/p/70002495" target="_blank">[58]</a></sup></li>
+</ul>
+</div>
+<div style="opacity: 1 !important;">
+<h4 class="font-semibold text-lg text-blue-700 mb-3" style="opacity: 1 !important;">行業配置建議</h4>
+<ul class="list-disc pl-6 space-y-2 text-gray-700" style="opacity: 1 !important;">
+<li style="opacity: 1 !important;"><strong class="text-gray-900">核心成長賽道</strong>：AI基建、創新藥、高階製造（40%-60%）</li>
+<li style="opacity: 1 !important;"><strong class="text-gray-900">防禦穩健板塊</strong>：新能源車、光伏、高股息銀行（20%-30%）</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-semibold text-gray-900 mb-4" style="opacity: 1 !important;">風險控制系統</h3>
+<ul class="list-disc pl-6 space-y-3 text-gray-700" style="opacity: 1 !important;">
+<li style="opacity: 1 !important;"><strong class="text-red-600">硬性止損</strong>：單一標的最大虧損15%即觸發止損<sup class="citation" title="炒股投入多少資金合適，如果用10萬以上炒股會賺錢嗎？: 未必不可能，在股市中什麼都可能發生。你無法知道100筆交易中的哪70筆將是盈利的，你無法決定它們的分佈。所以你需要問問自己如果連續的虧損，你還能存活在市場中來繼續進行這個遊戲嗎？
+。這就是資金管理如此"><a href="https://zhuanlan.zhihu.com/p/70002495" target="_blank">[58]</a></sup></li>
+<li style="opacity: 1 !important;"><strong class="text-green-600">現金儲備</strong>：保留20%資金應對市場極端波動<sup class="citation" title="10萬元也能理財_理財方略_投資指引: 那麼在剩下的金融性投資、經營性投資和消費中，你又該如何分配呢？全部拿來炒股，會不會風險太高；全部投資債券，看起來收益又很低。 我們就從投資的第一步—分析風險開始，看看10萬元可以做什麼樣的投資計劃。。"><a href="http://www.ccb.com/Info/43995634" target="_blank">[59]</a></sup></li>
+<li style="opacity: 1 !important;"><strong class="text-blue-700">季度再平衡</strong>：每季度調整組合至初始配置比例</li>
+</ul>
+<div class="mt-6 p-4 bg-gray-50 rounded-lg" style="opacity: 1 !important;">
+<p class="text-sm text-gray-600" style="opacity: 1 !important;"><i class="fas fa-info-circle text-blue-500 mr-2"></i>風險控制系統是投資成功的關鍵保障，建議嚴格執行</p>
+</div>
+</div>
+</div>
+<div class="bg-yellow-50 rounded-xl p-6 border border-yellow-200" style="opacity: 1 !important;">
+<h3 class="text-xl font-semibold text-gray-900 mb-4" style="opacity: 1 !important;">投資風險提示</h3>
+<ol class="list-decimal pl-6 space-y-3 text-gray-700" style="opacity: 1 !important;">
+<li style="opacity: 1 !important;">多晶硅價格波動影響新能源毛利率<sup class="citation" title="「瞭解我的上市公司——走進藍籌」系列活動走進特變電工: 特變電工主要產業包括輸變電、新能源、能源和新材料四大板塊。輸變電業務方面，公司是我國行業知名企業，具備生產超、特高壓交直流輸變電裝置以及大型水電、火電及核電等輸變電裝置能力，具備生產1000kV及以下"><a href="https://stcn.com/article/detail/1338083.html" target="_blank">[50]</a></sup></li>
+<li style="opacity: 1 !important;">銅、鋁等原材料成本壓力</li>
+<li style="opacity: 1 !important;">新能源行業競爭加劇風險</li>
+</ol>
+<div class="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg" style="opacity: 1 !important;">
+<p class="text-red-600 font-medium" style="opacity: 1 !important;"><i class="fas fa-exclamation-triangle mr-2"></i>投資涉及風險，本分析僅供參考。請根據個人風險承受能力謹慎決策。</p>
+</div>
+</div>
+<div class="mt-12 grid md:grid-cols-3 gap-6" style="opacity: 1 !important;">
+<div class="bg-white rounded-xl p-6 text-center shadow-md" style="opacity: 1 !important;">
+<div class="buy-recommendation rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="opacity: 1 !important;">
+<i class="fas fa-arrow-up text-2xl" style="opacity: 1 !important;"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2" style="opacity: 1 !important;">買入建議</h3>
+<p class="text-gray-600" style="opacity: 1 !important;">目前價位具備投資價值，建議分批建倉</p>
+</div>
+<div class="bg-white rounded-xl p-6 text-center shadow-md" style="opacity: 1 !important;">
+<div class="hold-recommendation rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="opacity: 1 !important;">
+<i class="fas fa-pause text-2xl" style="opacity: 1 !important;"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2" style="opacity: 1 !important;">持有建議</h3>
+<p class="text-gray-600" style="opacity: 1 !important;">已持倉投資者可繼續持有，等待價值釋放</p>
+</div>
+<div class="bg-white rounded-xl p-6 text-center shadow-md" style="opacity: 1 !important;">
+<div class="sell-recommendation rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="opacity: 1 !important;">
+<i class="fas fa-arrow-down text-2xl" style="opacity: 1 !important;"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2" style="opacity: 1 !important;">賣出建議</h3>
+<p class="text-gray-600" style="opacity: 1 !important;">達到目標價位或基本面惡化時考慮減持</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 頁尾 -->
+<footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center">
+<div class="flex justify-center space-x-6 mb-6">
+<a class="text-gray-300 hover:text-white transition-colors" href="#">
+<i class="fab fa-weixin text-2xl"></i>
+</a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#">
+<i class="fab fa-weibo text-2xl"></i>
+</a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#">
+<i class="fas fa-envelope text-2xl"></i>
+</a>
+
+    <div id="jump_to_index" class="flex flex-col items-center m-7">
+        <a href="https://iflow.cn/?appCode=MANUS_CHATBOT" target="_blank" class="text-center text-gray-400 underline">
+            由心流高級研究模式產生｜點選立即體驗
+        </a>
+    </div></div>
+<p class="text-gray-400 mb-4">
+<i class="fas fa-exclamation-triangle mr-2"></i>投資有風險，入市需謹慎
+                </p>
+<p class="text-gray-400 text-sm">
+                    本報告僅供參考，不構成投資建議。投資者應基於獨立判斷做出投資決策。
+                </p>
+<p class="text-gray-500 text-xs mt-4">
+                    © 2025 特變電工財務分析報告. 最後更新: 2025年10月8日
+                </p>
+</div>
+</div>
+</footer>
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

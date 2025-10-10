@@ -80,7 +80,25 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'semiconductor'
 		},
 		{
-            title: '長電科技 - 財務分析報告 (2023-2025) - 投資價值評估',
+            title: '天賜材料 - 財務報表分析與投資決策建議',
+            description: '一個關於天賜材料(002709)的財務分析與投資建議報告。',
+            url: '002709/index.html',
+            category: 'new-energy'
+		},
+		{
+            title: '廣匯能源 - 投資價值分析 (2023-2025年) | 專業金融分析報告',
+            description: '一個關於廣匯能源(600256)的財務分析與投資建議報告。',
+            url: '600256/index.html',
+            category: 'new-energy'
+		},
+		{
+            title: '特變電工 - 財務報表分析與投資建議 (2023-2025年)',
+            description: '一個關於v(600089)的財務分析與投資建議報告。',
+            url: '600089/index.html',
+            category: 'new-energy'
+		},
+		{
+            title: '長電科技 - 財務分析與投資評估',
             description: '一個關於長電科技(600854)的財務分析與投資建議報告。',
             url: '600854/index.html',
             category: 'semiconductor'
