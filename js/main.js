@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於華天科技(002815)的財務分析與投資建議報告。',
             url: '002815/index.html',
             category: 'semiconductor'
+		},
+		{
+            title: '長電科技 - 財務分析報告 (2023-2025) - 投資價值評估',
+            description: '一個關於長電科技(600854)的財務分析與投資建議報告。',
+            url: '600854/index.html',
+            category: 'semiconductor'
 		}
     ];
 
