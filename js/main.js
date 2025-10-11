@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '一個關於長電科技(600854)的財務分析與投資建議報告。',
             url: '600854/index.html',
             category: 'semiconductor'
+		},
+		{
+            title: '中國稀土 - 財務報表分析與投資評估',
+            description: '中國稀土(000831.SZ)財務報表分析與投資評估',
+            url: '000831/index.html',
+            category: 'RE'
 		}
     ];
 
